@@ -1,0 +1,14 @@
+[
+    {
+        "name": "PSReadLine",
+        "flags": [
+            "-AllowPrerelease"
+        ]
+    },
+    {
+        "name": "Terminal-Icons"
+    },
+    {
+        "name": "oh-my-posh"
+    }
+]

@@ -52,21 +52,38 @@ if ($IsMacOS) {
 
 Write-Host "Checking for PowerShell module dependencies"
 
-if ($host.Name -eq 'ConsoleHost') {
-    if (!(Get-Module -ListAvailable -Name PSReadLine)) {
-        Write-Host "PSReadLine module not found, installing"
-        Install-Module -Name PSReadLine -AllowPrerelease -Force -Scope CurrentUser
+$modules = Get-Content -Path './ps-modules.json' | ConvertFrom-Json
+
+foreach ($module in $modules) {
+    $name = $module.name
+    $flags = $module.flags
+    if (Get-InstalledModule -Name $name -ErrorAction:SilentlyContinue) {
+        Write-Host "Module $name exists, skipping install"
+    }
+    else {
+        Write-Host "Module $name does not exist, installing..."
+        if ($flags) {
+            Install-Module -Name $name $flags -Force -Scope CurrentUser
+        }
+        else {
+            Install-Module -Name $name -Force -Scope CurrentUser
+        }
     }
 }
 
-if (!(Get-Module -ListAvailable -Name Terminal-Icons)) {
-    Write-Host "Terminal-Icons module not found, installing"
-    Install-Module -Name Terminal-Icons -Force -Scope CurrentUser
-}
+Write-Host "Checking for PowerShell scripts"
 
-if (!(Get-Module -ListAvailable -Name oh-my-posh)) {
-    Write-Host "oh-my-posh module not found, installing"
-    Install-Module -Name oh-my-posh -Force -Scope CurrentUser
+$scripts = Get-Content -Path './ps-scripts.json' | ConvertFrom-Json
+
+foreach ($script in $scripts) {
+    $name = $script.name
+    if (Get-InstalledScript -Name $name -ErrorAction:SilentlyContinue) {
+        Write-Host "Script $name exists, skipping install"
+    }
+    else {
+        Write-Host "Script $name does not exist, installing..."
+        Install-Script -Name $name -Force
+    }
 }
 
 Write-Host "Completed configuration settings"

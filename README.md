@@ -3,7 +3,7 @@
 ## Prerequisites
 
 - Make sure PowerShell(cross-platform version) is installed. [PowerShell docs](https://aka.ms/powershell)
-- Git for cloning the repo. Manually install from [Git-Scm](https://git-scm.com/downloadsn). Can run ```winget install -e --id Git.Git``` if on Windows with winget already installed. On Linux or MacOS use respective package manager. eg. ```sudo apt install git```
+- Git for cloning the repo. Manually install from [Git-Scm](https://git-scm.com/downloads). Can run ```winget install -e --id Git.Git``` if on Windows with winget already installed. On Linux or MacOS use respective package manager. eg. ```sudo apt install git```
 
 ## Steps
 

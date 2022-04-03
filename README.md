@@ -20,6 +20,5 @@
     ```
 
 ## TODO:
-- [ ] Move hardcoded PowerShell modules to a separate file
 - [ ] Make the setup more OS agnostic, include bash and/or python scripts
 - [ ] Steps for MacOS

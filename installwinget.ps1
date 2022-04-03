@@ -43,6 +43,7 @@ $ProgrammingApps = @(
     @{name = "MongoDB.Compass.Community" },
     @{name = "Microsoft.VisualStudio.2022.Community" },
     @{name = "Microsoft.VisualStudio.2019.BuildTools" },
+    @{name = "Microsoft.PowerShell" },
     # @{name = "JanDeDobbeleer.OhMyPosh" },
     # @{name = "Microsoft.dotnet" },
     @{name = "DevToys"; source = "msstore" }

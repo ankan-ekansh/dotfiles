@@ -1,7 +1,5 @@
 #Requires -RunAsAdministrator
 
-# TODO: Add git clone and cd here
-
 if ($IsWindows) {
     Write-Host "Installing Fonts"
     Invoke-WebRequest -Uri "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CascadiaCode.zip" -OutFile "./CascadiaCode.zip"

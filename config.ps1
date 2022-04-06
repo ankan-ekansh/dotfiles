@@ -21,7 +21,7 @@ if ($IsWindows) {
 
     New-Item -ItemType SymbolicLink -Path "~\.gitconfig" -Target "dotfiles\.gitconfig" -Force
 
-    New-Item -ItemType SymbolicLink -Path "~\OneDrive\Documents\PowerShell" -Target "..\..\dotfiles\PowerShell" -Force
+    New-Item -ItemType SymbolicLink -Path "~\Documents\PowerShell" -Target "..\dotfiles\PowerShell" -Force
 
     Write-Host "Cleaning up stuff"
 

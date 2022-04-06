@@ -8,6 +8,7 @@ if ($host.Name -eq 'ConsoleHost') {
     Import-Module PSReadLine
 }
 Import-Module -Name Terminal-Icons
+Import-Module oh-my-posh
 
 oh-my-posh --init --shell pwsh --config ~\dotfiles\ohmyposhv3-v2.json | Invoke-Expression
 Set-Alias winfetch pwshfetch-test-1

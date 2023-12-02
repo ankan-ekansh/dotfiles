@@ -46,7 +46,8 @@ $ProgrammingApps = @(
     @{name = "Microsoft.PowerShell" },
     # @{name = "JanDeDobbeleer.OhMyPosh" },
     # @{name = "Microsoft.dotnet" },
-    @{name = "DevToys"; source = "msstore" }
+    @{name = "DevToys"; source = "msstore" },
+    @{name = "Chocolatey.Chocolatey" }
 )
 
 $GamingApps = @(

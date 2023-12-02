@@ -10,7 +10,6 @@ if ($host.Name -eq 'ConsoleHost') {
 Import-Module -Name Terminal-Icons
 
 oh-my-posh --init --shell pwsh --config ~\dotfiles\ohmyposhv3-v2.json | Invoke-Expression
-Set-Alias winfetch pwshfetch-test-1
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
     param($wordToComplete, $commandAst, $cursorPosition)
@@ -648,4 +647,13 @@ Set-PSReadLineKeyHandler -Key Ctrl+Shift+t `
     [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
     [Microsoft.PowerShell.PSConsoleReadLine]::Insert("dotnet test")
     [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
+}
+# Import the Chocolatey Profile that contains the necessary code to enable
+# tab-completions to function for `choco`.
+# Be aware that if you are missing these lines from your profile, tab completion
+# for `choco` will not function.
+# See https://ch0.co/tab-completion for details.
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+    Import-Module "$ChocolateyProfile"
 }

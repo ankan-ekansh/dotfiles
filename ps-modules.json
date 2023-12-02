@@ -1,9 +1,6 @@
 [
     {
-        "name": "PSReadLine",
-        "flags": [
-            "-AllowPrerelease"
-        ]
+        "name": "PSReadLine"
     },
     {
         "name": "Terminal-Icons"

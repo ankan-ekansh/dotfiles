@@ -43,7 +43,6 @@ $ProgrammingApps = @(
     @{name = "MongoDB.Compass.Community" },
     @{name = "Microsoft.VisualStudio.2022.Community" },
     @{name = "Microsoft.VisualStudio.2019.BuildTools" },
-    @{name = "Microsoft.PowerShell" },
     # @{name = "JanDeDobbeleer.OhMyPosh" },
     # @{name = "Microsoft.dotnet" },
     @{name = "DevToys"; source = "msstore" },
@@ -55,7 +54,6 @@ $GamingApps = @(
     @{name = "Discord.Discord" },
     @{name = "Nvidia.GeForceExperience" },
     @{name = "EpicGames.EpicGamesLauncher" },
-    @{name = "ElectronicArts.EADesktop" },
     @{name = "Ubisoft.Connect" }
 )
 
@@ -64,12 +62,10 @@ $MiscellaneousApps = @(
     @{name = "CPUID.CPU-Z" },
     @{name = "OBSProject.OBSStudio" },
     @{name = "ProtonTechnologies.ProtonVPN" },
-    @{name = "Spotify.Spotify" },
     @{name = "VideoLAN.VLC" },
     @{name = "WinDirStat.WinDirStat" },
     @{name = "RARLab.WinRAR" },
     @{name = "qBittorrent.qBittorrent" },
-    @{name = "Adobe.Acrobat.Reader.64-bit" },
     @{name = "GIMP.GIMP" },
     @{name = "Rufus.Rufus" }
 )
